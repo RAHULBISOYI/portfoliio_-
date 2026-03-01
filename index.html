@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mikon Portfolio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#111;
+  color:#fff;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 60px;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:700;
+}
+
+.logo span{
+  color:#38bdf8; /* Light Blue Dot */
+}
+
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:40px;
+}
+
+.nav-links li{
+  font-size:14px;
+  letter-spacing:1px;
+  cursor:pointer;
+}
+
+.nav-links li:hover{
+  color:#38bdf8;
+}
+
+.talk-btn{
+  background:#000;
+  color:#fff;
+  border:1px solid #fff;
+  padding:8px 18px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* HERO SECTION */
+.hero{
+  display:flex;
+  height:90vh;
+}
+
+/* LEFT SIDE */
+.left{
+  flex:1;
+  background:#000;
+  padding:80px 80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.left h1{
+  font-size:70px;
+  font-weight:600;
+  margin-bottom:30px;
+}
+
+.role{
+  display:inline-block;
+  padding:10px 20px;
+  border:3px solid #38bdf8;
+  background:#fff;
+  color:#000;
+  font-weight:600;
+  letter-spacing:2px;
+  margin-bottom:30px;
+}
+
+.get-btn{
+  background:#111;
+  border:1px solid #444;
+  color:#fff;
+  padding:12px 25px;
+  width:160px;
+  border-radius:6px;
+  cursor:pointer;
+  margin-bottom:50px;
+}
+
+.stats{
+  display:flex;
+  gap:60px;
+}
+
+.stats div{
+  font-size:30px;
+  font-weight:600;
+}
+
+.stats span{
+  color:#38bdf8;
+}
+
+.stats p{
+  font-size:12px;
+  color:#aaa;
+  margin-top:5px;
+}
+
+/* RIGHT SIDE */
+.right{
+  flex:1;
+  background:#38bdf8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+.right img{
+  height:85%;
+  object-fit:cover;
+}
+
+/* Vertical Text */
+.vertical-text{
+  position:absolute;
+  right:10px;
+  writing-mode:vertical-rl;
+  text-orientation:mixed;
+  font-size:14px;
+  letter-spacing:3px;
+  color:#000;
+  font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">mikon<span>.</span></div>
+  <ul class="nav-links">
+    <li>HOME</li>
+    <li>SERVICES</li>
+    <li>PROJECTS</li>
+    <li>ABOUT ME</li>
+    <li>CONTACT</li>
+  </ul>
+  <button class="talk-btn">Let's Talk</button>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+  <!-- LEFT -->
+  <div class="left">
+    <h1>I’m Mikon</h1>
+
+    <div class="role">I’M A DEVELOPER</div>
+
+    <button class="get-btn">Get in touch →</button>
+
+    <div class="stats">
+      <div>
+        280<span>+</span>
+        <p>Google Review</p>
+      </div>
+
+      <div>
+        15<span>+</span>
+        <p>Years Experience</p>
+      </div>
+
+      <div>
+        49<span>+</span>
+        <p>Award Winning</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <!-- Replace image URL with your own -->
+    <img src="https://i.imgur.com/3d6K0YQ.png" alt="Profile">
+    <div class="vertical-text">MY EXPERTISE</div>
+  </div>
+
+</section>
+
+</body>
+</html>
