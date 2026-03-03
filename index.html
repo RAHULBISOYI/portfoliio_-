@@ -402,11 +402,18 @@
       transform:translateY(-6px); box-shadow:0 20px 48px rgba(0,229,255,.1);
       border-color:rgba(0,229,255,.28);
     }
-    .port-thumb {
-      height:170px; display:flex; align-items:center;
-      justify-content:center; font-size:2.8rem;
-      background:linear-gradient(135deg,#162030,#0c1f38);
-    }
+   .port-thumb {
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+
+  background-image: url("backround.png");
+  background-size: cover;        /* fills the div */
+  background-position: center;   /* centers the image */
+  background-repeat: no-repeat;  /* prevents tiling */
+}
     .port-body { padding:20px; }
     .port-body h3 { font-size:.9rem; font-weight:700; color:#fff; margin-bottom:8px; }
     .port-body p  { font-size:.78rem; color:var(--muted); line-height:1.65; }
