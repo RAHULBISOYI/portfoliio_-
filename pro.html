@@ -79,8 +79,8 @@
   object-position: center bottom;
   position: relative;
   z-index: 5;
-  margin-top: 50px;  /* slightly adjust */
-  left: 125px;       /* small horizontal correction */
+  margin-top: 46px;  /* slightly adjust */
+  left: 20px;       /* small horizontal correction */
 }
 
 /* HEX BORDER - Send Behind */
@@ -104,15 +104,15 @@
 @keyframes neonPulse {
   0%,100% {
     filter:
-      drop-shadow(0 0 5px #00e5ff)
-      drop-shadow(0 0 15px rgba(0,229,255,0.8))
+      drop-shadow(0 0 5px #349aa5)
+      drop-shadow(0 0 15px rgba(43, 146, 157, 0.8))
       drop-shadow(0 0 30px rgba(0,229,255,0.6))
       drop-shadow(0 0 60px rgba(0,229,255,0.3));
   }
   50% {
     filter:
       drop-shadow(0 0 10px #4eafba)
-      drop-shadow(0 0 25px rgba(0,229,255,1))
+      drop-shadow(0 0 25px rgb(60, 138, 147))
       
       drop-shadow(0 0 80px rgba(0,229,255,0.4));
   }
@@ -231,6 +231,136 @@
       background:var(--cyan); color:#000;
       transform:translateY(-2px); box-shadow:0 8px 22px var(--cyan-glow);
     }
+    /* ===== EDUCATION SECTION ===== */
+    .education-section {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #0a192f 0%,
+    #0f1e3a 50%,
+    #081229 100%
+  );
+  padding: 80px 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.education-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.section-small {
+  color: #00e0ff;
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+.section-title span {
+  color: #00e0ff;
+}
+
+.edu-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  border-left: 4px solid #00e0ff;
+  transition: 0.3s ease;
+  text-align: left;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.edu-card h2 {
+  margin-bottom: 5px;
+}
+
+.edu-card h3 {
+  color: #00e0ff;
+  margin-bottom: 8px;
+}
+
+.edu-year {
+  color: #b0c4de;
+  margin-bottom: 5px;
+}
+
+.edu-place {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.edu-desc {
+  color: #dcdcdc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #00e0ff;
+  color: #00e0ff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #00e0ff;
+  color: #081229;
+}
+  /* ══ Skill ═══════════════════════════════════ */
+  .skills-section {
+  padding: 60px 10%;
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+}
+
+.skills-section h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.skills-section h1 span {
+  color: #38bdf8;
+}
+
+.skill-category {
+  background: #1e293b;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.skill-category h3 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.skill-category p {
+  font-size: 16px;
+  color: #cbd5e1;
+}
+
+.skill-category:hover {
+  transform: translateY(-8px);
+  background: #334155;
+}
+
 
     /* ══ SERVICES ═══════════════════════════════════ */
     #services { background:var(--dark1); padding:100px 56px; }
@@ -379,8 +509,10 @@
   <nav>
     <a href="#home" class="active">Home</a>
     <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
+     <a href="#education">Education</a>
+      <a href="#skills">Skill</a>
+    <a href="#services">My certification</a>
+    <a href="#portfolio">Recent project</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -422,8 +554,8 @@
         <!-- Neon hex border SVG — no fill, just glowing outline -->
         <div class="hex-svg">
           <svg viewBox="0 0 260 260"
-     width="550"
-     height="400"
+     width="345"
+     height="380"
      fill="none"
      xmlns="http://www.w3.org/2000/svg">  <!-- Outer soft glow layer -->
       
@@ -432,9 +564,9 @@
 <polygon
   points="130,10 240,90 240,200 20,200 20,90"
   fill="none"
-  stroke="#00e5ff"
+  stroke="	#e4edf2 "
   stroke-linejoin="round" 
-  stroke-width="6"
+  stroke-width="38"
 />
 
 <!-- TOP GLOW ONLY (Thick) -->
@@ -443,7 +575,7 @@
   fill="none"
   stroke="rgba(0,229,255,0.25)"
   stroke-linejoin="round" 
-  stroke-width="6"
+  stroke-width="38"
 />
 
 <!-- TOP INNER GLOW -->
@@ -452,7 +584,7 @@
   fill="none"
   stroke="rgba(255,255,255,0.5)"
   stroke-linejoin="round" 
-  stroke-width="6"
+  stroke-width="38"
 />
      </svg>
         </div>
@@ -480,10 +612,89 @@
       <span class="tag">Get To Know More</span>
       <h2 class="sec-title">About <span>Me</span></h2>
       <p class="sec-sub">Frontend Developer!</p>
-      <p class="sec-text">I’m Rahul Bisoyi, a Computer Science undergraduate focused on full-stack web development and software engineering. I enjoy transforming ideas into functional web applications and continuously improving my technical skills through hands-on projects and certifications from IIT Madras and IIT Kharagpur. My goal is to build scalable, efficient, and user-friendly applications while growing as a professional developer.</p>
+      <p class="sec-text">I’m Rahul Bisoyi,I am a dedicated and enthusiastic Computer Science student currently pursuing B.Tech (3rd year). I have strong knowledge of Java, Python, and web development technologies. I enjoy solving real-world problems through coding and building practical projects.I am actively improving my data structures and backend development skills and seeking opportunities where I can contribute and grow professionally</p>
       <a href="#contact" class="btn-outline">Read More</a>
     </div>
 
+  </div>
+</section>
+
+
+
+<!-- ══ education ══════════════════════════════════════ -->
+
+<section  id ="education" class="education-section">
+  <div class="education-container">
+    <p class="section-small">ACADEMIC JOURNEY</p>
+    <h1 class="section-title">My <span>Education</span></h1>
+
+    <!-- B.Tech -->
+    <div class="edu-card">
+      <h2>Bachelor of Technology (B.Tech)</h2>
+      <h3>Computer Science and Engineering</h3>
+      <p class="edu-year">2023 – 2027</p>
+      <p class="edu-place">GIET UNIVERSITY,GUNUPUR,ODISHA</p>
+      <p class="edu-desc">
+        Currently pursuing my undergraduate degree with focus on
+        Data Structures, Algorithms, Web Development and Backend Technologies.
+      </p>
+      <a href="documents/btech-certificate.pdf" download class="download-btn">
+        Download Certificate
+      </a>
+    </div>
+
+    <!-- 12th -->
+    <div class="edu-card">
+      <h2>Higher Secondary (12th)</h2>
+      <p class="edu-year">Completed in 2023</p>
+      <p class="edu-place">NALANDA VIDYA MANDIR ,BERHAMPUR,ODISHA( CHSE)</p>
+      <p class="edu-desc">
+        Completed higher secondary education in Science stream.
+      </p>
+      <a href="12th.jpg" download class="download-btn">
+        Download Certificate
+      </a>
+    </div>
+
+    <!-- 10th -->
+   <div class="edu-card">
+  <h2>Secondary Education (10th)</h2>
+  <p class="edu-year">Completed in 2021</p>
+  <p class="edu-place">BALLIPADAR HIGH SCHOOL, GANJAM, Odisha (BSE )</p>
+  <p class="edu-desc">
+    Completed secondary education under BSE Odisha with strong
+    foundation in Mathematics and Science.
+  </p>
+  <a href="10th certi_page-0001.jpg" download class="download-btn">
+    Download Certificate
+  </a>
+</div>
+
+  </div>
+</section>
+
+<!-- ══ Skill ══════════════════════════════════════ -->
+<section  id ="skills" class="skills-section">
+  <h1>My <span>Skills</span></h1>
+
+  <div class="skill-category">
+    <h3>Programming</h3>
+    <p>Java, Python, C, JavaScript</p>
+  </div>
+
+  <div class="skill-category">
+    <h3>Web Development</h3>
+    <p>HTML, CSS, JavaScript</p>
+  </div>
+
+  <div class="skill-category">
+    <h3>Databases</h3>
+    <p>MySQL, MongoDB</p>
+  </div>
+
+  <div class="skill-category">
+    <h3>Core Concepts</h3>
+    <p>Data Structures, OOP, DBMS</p>
   </div>
 </section>
 
@@ -491,18 +702,33 @@
 <section id="services">
   <div class="sec-header reveal"><span class="tag">Internship</span><h2 class="sec-title">My <span>Certifications</span></h2></div>
   <div class="services-grid">
-    <div class="svc-card reveal"><div class="svc-icon">💻</div><h3>Summer internship</h3><p>Crafting intuitive, visually compelling interfaces that delight users.</p></div>
-    <div class="svc-card reveal" style="transition-delay:.1s"><div class="svc-icon">💻</div><h3>Nptl</h3><p>Building responsive, high-performance web apps with modern tech.</p></div>
-    <div class="svc-card reveal" style="transition-delay:.2s"><div class="svc-icon">💻</div><h3>Skill Build</h3><p>Pixel-perfect layouts ensuring flawless experiences across all devices.</p></div>
-    <div class="svc-card reveal" style="transition-delay:.3s"><div class="svc-icon">💻</div><h3>Performance Optimization</h3><p>Speed audits and optimization for lightning-fast load times.</p></div>
+ <a href="summer_intern.html" class="svc-link">
+  <div class="svc-card reveal">
+    <div class="svc-icon">💻</div>
+    <h3>Summer Internship</h3>
   </div>
+</a>
+
+<a href="nptl.html" class="svc-link">
+  <div class="svc-card reveal" style="transition-delay:.1s">
+    <div class="svc-icon">💻</div>
+    <h3>NPTEL</h3>
+  </div>
+</a>
+
+<a href="skill.html" class="svc-link">
+  <div class="svc-card reveal" style="transition-delay:.2s">
+    <div class="svc-icon">💻</div>
+    <h3>Skill Build</h3>
+  </div>
+</a> </div>
 </section>
 
 <!-- ══ PORTFOLIO ══════════════════════════════════════ -->
 <section id="portfolio">
   <div class="sec-header reveal"><span class="tag">My Work</span><h2 class="sec-title">Recent <span>Projects</span></h2></div>
   <div class="port-grid">
-    <div class="port-card reveal"><div class="port-thumb"> ♻️<tool_call></div><div class="port-body"><h3>water and waste management</h3><p>The project is expected to create a measurable positive impact on water conservation, sanitation practices, and environmental awareness, directly supporting SDG 6: Clean Water and Sanitation.</p><span class="port-tag">HTML . CSS .Api.NodeJs.Rag</span><a href="#contact" class="btn-inline"> Git repository</a></div></div>
+    <div class="port-card reveal"><div class="port-thumb"> ♻️<tool_call></div><div class="port-body"><h3>water and waste management</h3><p>The project is expected to create a measurable positive impact on water conservation, sanitation practices, and environmental awareness, directly supporting SDG 6: Clean Water and Sanitation.</p><span class="port-tag">HTML . CSS .Api.NodeJs.Rag</span><a href="https://github.com/RAHULBISOYI/ibm_water_and_waste_management.git" class="btn-inline"> Git repository</a></div></div>
     
     <div class="port-card reveal"><div class="port-thumb">💶</div><div class="port-body"><h3>Currency Converter</h3><p>Developed a responsive currency converter using HTML, CSS, and API integration to fetch and display real-time exchange rates.</p><span class="port-tag">HTML . CSS . API </span><a href="#contact" class="btn-inline"> Git repository</a></div></div>
     <div class="port-card reveal" style="transition-delay:.1s"><div class="port-thumb">📋</div><div class="port-body"><h3>Resume builder</h3><p>Designed and developed a resume builder application</p><span class="port-tag">PHP.SQL.HTML.CSS </span><a href="https://github.com/RAHULBISOYI/student-document-assistant.git" class="btn-inline"> Git repository</a></div></div>
@@ -556,7 +782,7 @@ function sendToWhatsApp() {
 }
 </script>
 <!-- ══ FOOTER ═════════════════════════════════════════ -->
-<footer><p>© 2025 <span>John Kendric</span>. All rights reserved.</p></footer>
+<footer><p>© 2025 <span>RAHUL</span>. All rights reserved.</p></footer>
 
 <script>
   const sections = document.querySelectorAll('section[id]');
