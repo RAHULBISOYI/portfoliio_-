@@ -48,6 +48,29 @@
     nav a:hover, nav a.active { color:var(--cyan); }
     nav a:hover::after, nav a.active::after { width:100%; }
 
+    /* PARTICLE BACKGROUND */
+
+#particles-home{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+}
+
+/* SMOOTH CURSOR GLOW */
+
+
+
+
+
+/* keep hero content above effects */
+
+.hero-wrap{
+  position:relative;
+  z-index:2;
+}
     /* ══════════════════════════════════════════════
        HEX PORTRAIT — Exact match to reference:
        ─ NO fill inside hex (transparent)
@@ -411,8 +434,8 @@
 
   background-image: url("backround.png");
   background-size: cover;        /* fills the div */
-  background-position: center;   /* centers the image */
-  background-repeat: no-repeat;  /* prevents tiling */
+  background-position: center;   /* centers image */
+  background-repeat: no-repeat;  /* no tiling */
 }
     .port-body { padding:20px; }
     .port-body h3 { font-size:.9rem; font-weight:700; color:#fff; margin-bottom:8px; }
@@ -526,6 +549,13 @@
 
 <!-- ══ HERO ══════════════════════════════════════════ -->
 <section id="home">
+    <!-- Background particles -->
+  <div id="particles-home"></div>
+
+  <!-- Cursor glow -->
+  <div class="home-glow" id="homeGlow"></div>
+
+  
   <div class="hero-wrap">
 
     <div class="hero-left">
@@ -812,6 +842,50 @@ function sendToWhatsApp() {
       if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
     });
   });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+
+/* PARTICLES BACKGROUND */
+
+particlesJS("particles-home",{
+  particles:{
+    number:{value:70},
+    size:{value:3},
+    move:{speed:1.5},
+    line_linked:{
+      enable:true,
+      distance:150,
+      color:"#00e5ff",
+      opacity:0.4
+    }
+  },
+  interactivity:{
+    events:{
+      onhover:{enable:true,mode:"repulse"}
+    }
+  }
+});
+
+
+/* CURSOR GLOW */
+
+const home = document.getElementById("home");
+const glow = document.getElementById("homeGlow");
+
+home.addEventListener("mousemove", (e) => {
+
+  const rect = home.getBoundingClientRect();
+
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  glow.style.left = x + "px";
+  glow.style.top = y + "px";
+
+});
+
 </script>
 </body>
 </html>
